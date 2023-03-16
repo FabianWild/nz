@@ -6,52 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuseelandreise</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 
 <body>
 
-<header></header>
-<main>
-    <article>
-        <h1>Neuseelandreise</h1>
-        <h2><em>Abel-Tasman-Nationalpark</em></h2>
-        <p>Der Abel Tasman National Park schützt ein 235,3 km² großes Gebiet an der Nordküste von Neuseelands Südinsel. <br>
-            Er
-            befindet sich am <strong>nördlichen</strong> Ende einer Hügelkette zwischen den beiden großen Meeresbuchten
-            Golden Bay und Tasman
-            Bay, etwa 70 km von Nelson entfernt. <br> Die Höhenlage reicht vom Meeresspiegel bis etwa 1150 m. <br>
-            (Quelle: <a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark">Wikipedia</a> )
-        </p>
-        <figure>
-            <img src="images/attraction.jpg"
-                alt="Das Bild zeigt eine Bucht im Abel-Tasman-Nationalpark. Man sieht das Meer und die Milchstraße">
-            <figcaption>Das Bild zeigt eine Bucht im Abel-Tasman-Nationalpark. Man sieht das Meer und die Milchstraße
-                (Quelle: <a href="https://pixabay.com/de/photos/abel-tasman-bucht-milchstra%c3%9fe-3576912/">Ricardo_Helass</a>)
-            </figcaption>
-        </figure>
-        <h3>Übersichtskarte</h3>
-         <div id="map" style="width: 90%; height: 600px; border: 1px solid silver; margin: auto"></div>
+    <header></header>
+    <main>
+        <article>
+            <h1>Neuseelandreise</h1>
+            <h2><em>Abel-Tasman-Nationalpark</em></h2>
+            <p>Der Abel Tasman National Park schützt ein 235,3 km² großes Gebiet an der Nordküste von Neuseelands
+                Südinsel. <br>
+                Er
+                befindet sich am <strong>nördlichen</strong> Ende einer Hügelkette zwischen den beiden großen
+                Meeresbuchten
+                Golden Bay und Tasman
+                Bay, etwa 70 km von Nelson entfernt. <br> Die Höhenlage reicht vom Meeresspiegel bis etwa 1150 m. <br>
+                (Quelle: <a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark">Wikipedia</a> )
+            </p>
+            <figure>
+                <img src="images/attraction.jpg"
+                    alt="Das Bild zeigt eine Bucht im Abel-Tasman-Nationalpark. Man sieht das Meer und die Milchstraße">
+                <figcaption>Das Bild zeigt eine Bucht im Abel-Tasman-Nationalpark. Man sieht das Meer und die
+                    Milchstraße
+                    (Quelle: <a
+                        href="https://pixabay.com/de/photos/abel-tasman-bucht-milchstra%c3%9fe-3576912/">Ricardo_Helass</a>)
+                </figcaption>
+            </figure>
+            <h3>Übersichtskarte</h3>
+            <div id="map" style="width: 90%; height: 600px; border: 1px solid silver; margin: auto"></div>
 
-         <h3>Links</h3>
-         <ul>
-             <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Abel_Tasman2.jpg"> Link 1</a></li>
-             <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Anapai_Bay.jpg">Link 2</a></li>
-             <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:AbelTasmanNP.jpg">Link 3</a></li>
-         </ul>
-       
-    </article>
-</main>
-<footer>
-    <nav>
-        <a href="https://ttfg22.github.io/nz/"> 🡸 vorherige Etappe</a> |
-        <a href="https://lauramap.github.io/nz/"> nächste Etappe 🡺</a>
+            <h3>Links</h3>
+            <ul>
+                <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Abel_Tasman2.jpg"> Link
+                        1</a></li>
+                <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Anapai_Bay.jpg">Link
+                        2</a></li>
+                <li><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:AbelTasmanNP.jpg">Link
+                        3</a></li>
+            </ul>
 
-    </nav>
-</footer>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://ttfg22.github.io/nz/"> 🡸 vorherige Etappe</a> |
+            <a href="https://lauramap.github.io/nz/"> nächste Etappe 🡺</a>
 
-    
+        </nav>
+    </footer>
+
+
     <script>
         var map = L.map('map').setView([-40.833333, 172.9], 13);
 
