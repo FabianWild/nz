@@ -72,7 +72,7 @@ const STOPS = [
         user: "damerow",
         lat: -41.2875,
         lng: 174.7761,
-        Wikipedia: "https://de.wikipedia.org/wiki/Wellington",                
+        wikipedia: "https://de.wikipedia.org/wiki/Wellington",                
     }, 
     {
         title: "Tongariro-Nationalpark",
@@ -98,7 +98,13 @@ const STOPS = [
          ];
     
 
-console.log(STOPS);
+for (let stop of STOPS){
+    console.log(stop.title);
+    console.log(stop.user);
+    console.log(stop.lat);
+    console.log(stop.lng);
+    console.log(stop.wikipedia);
+}
 
 let map = L.map('map').setView([stop_lat, stop_lon], zoom);
 
