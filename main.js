@@ -84,8 +84,8 @@ const STOPS = [
     {
        title: "Rotorua",
         user: "juba1508",
-        lat: "-38.136944",
-        lng: "176.250833",
+        lat: -38.136944,
+        lng: 176.250833,
         wikipedia: "https://de.wikipedia.org/wiki/Rotorua"
     }, 
     {
@@ -101,23 +101,29 @@ const STOPS = [
 
 let map = L.map('map').setView([stop_lat, stop_lon], zoom);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+
+L.control.scale({metric: true}, {imperial: false}).addTo(map);
+
+L.control.layers({
+    "OpenStreetmap": osm, 
+    "Watercolor": watercolor
 }).addTo(map);
 
-L.marker([stop_lat, stop_lon]).addTo(map)
-    .bindPopup(title)
-    .openPopup(); 
 
-    for (let stop of STOPS){
-        console.log(stop.title);
-        console.log(stop.user);
-        console.log(stop.lat);
-        console.log(stop.lng);
-        console.log(stop.wikipedia);
+for (let stop of STOPS){
 
-        L.marker([stop.lat, stop.lng]).addTo(map)
-        .bindPopup(stop.title)
-        .openPopup(); 
-    }
+     let marker = L.marker([stop.lat, stop.lng],{opacity: 0.7})
+     .addTo(map)
+     .bindPopup(`<h3>${stop.title}</h3>
+     <a href = "${stop.wikipedia}"> Wikipedia</a>`);
+
+     if(stop.user == "fabianwild"){
+        marker.openPopup();
+        console.log("Mein Marker: ", stop);
+      }
+  }
     

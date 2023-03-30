@@ -11,18 +11,21 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="main.js" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
 
     <header>
         <!-- https://pixabay.com/de/photos/marahau-sandbucht-strand-neuseeland-1675778/ -->
-        <img class = "shadow" src="images/header.jpg" alt="Das Bild zeigt einen Strand im Abel-Tasman-Nationalpark">
+        <img class="shadow" src="images/header.jpg" alt="Das Bild zeigt einen Strand im Abel-Tasman-Nationalpark">
         <!-- https://pixabay.com/de/photos/lagen-berg-vogel-fliegend-tele-2268220/ -->
         <a href="https://github.com/FabianWild"><img src="images/user.jpg" alt="Vogel"></a>
     </header>
@@ -37,26 +40,35 @@
                 Meeresbuchten
                 Golden Bay und Tasman
                 Bay, etwa 70 km von Nelson entfernt. <br> Die Höhenlage reicht vom Meeresspiegel bis etwa 1150 m. <br>
-                (Quelle: <a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark" style="color: rgb(159, 165, 255);">Wikipedia</a> )
+                (Quelle: <a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark"
+                    style="color: rgb(159, 165, 255);">Wikipedia</a> )
             </p>
-            <figure class = "shadow">
+            <figure class="shadow">
                 <img src="images/attraction.jpg"
                     alt="Man sieht das Meer und die Milchstraße im Abel-Tasman-Nationalpark">
-                <figcaption id = "figcaption"><i class="fa-sharp fa-solid fa-camera-retro"></i> Man sieht Meer, ein Boot und die Milchstraße von einer Bucht im Abel-Tasman-Nationalpark
-                    (Quelle: <a
-                        href="https://pixabay.com/de/photos/abel-tasman-bucht-milchstra%c3%9fe-3576912/" style="color: rgb(159, 165, 255);">Ricardo_Helass <i class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a>)
+                <figcaption id="figcaption"><i class="fa-sharp fa-solid fa-camera-retro"></i> Man sieht Meer, ein Boot
+                    und die Milchstraße von einer Bucht im Abel-Tasman-Nationalpark
+                    (Quelle: <a href="https://pixabay.com/de/photos/abel-tasman-bucht-milchstra%c3%9fe-3576912/"
+                        style="color: rgb(159, 165, 255);">Ricardo_Helass <i
+                            class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a>)
                 </figcaption>
             </figure>
             <h3>Übersichtskarte</h3>
-            <div id="map" class = "shadow"></div>
+            <div id="map" class="shadow"></div>
 
             <h3>Links</h3>
             <ul>
-                <li style="color: azure;"><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Abel_Tasman2.jpg" style="color: azure;">Link
+                <li style="color: azure;"><a
+                        href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Abel_Tasman2.jpg"
+                        style="color: azure;">Link
                         1 <i class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                <li style="color: azure;"><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Anapai_Bay.jpg" style="color: azure;">Link
+                <li style="color: azure;"><a
+                        href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:Anapai_Bay.jpg"
+                        style="color: azure;">Link
                         2 <i class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                <li style="color: azure;"><a href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:AbelTasmanNP.jpg" style="color: azure;">Link
+                <li style="color: azure;"><a
+                        href="https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark#/media/Datei:AbelTasmanNP.jpg"
+                        style="color: azure;">Link
                         3 <i class="fa-sharp fa-solid fa-arrow-right-to-bracket"></i></a></li>
             </ul>
 
@@ -64,16 +76,18 @@
     </main>
     <footer>
         <nav>
-            <a href="https://ttfg22.github.io/nz/" style="color: azure;"> <i class="fa-sharp fa-solid fa-circle-arrow-left"></i> vorherige Etappe</a>
+            <a href="https://ttfg22.github.io/nz/" style="color: azure;"> <i
+                    class="fa-sharp fa-solid fa-circle-arrow-left"></i> vorherige Etappe</a>
             <span>Abel-Tasman-Nationalpark</span>
-            <a href="https://lauramap.github.io/nz/" style="color: azure;"> nächste Etappe <i class="fa-sharp fa-solid fa-circle-arrow-right"></i></a>
+            <a href="https://lauramap.github.io/nz/" style="color: azure;"> nächste Etappe <i
+                    class="fa-sharp fa-solid fa-circle-arrow-right"></i></a>
 
         </nav>
     </footer>
 
 
     <script>
-       
+
     </script>
 
 </body>
