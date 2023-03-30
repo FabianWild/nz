@@ -3,13 +3,15 @@ let stop_lon = 172.9;
 let zoom = 13;
 let title = "Abel Tasman Nationalpark";
 
-const STOPS = ["Franz-Josef Gletscher", "Abel Tasman Nationalpark", "Picton"];
-console.log(STOPS)
-console.log(STOPS[0]);
-console.log(STOPS[1]);
-console.log(STOPS[2]);
-console.log(STOPS.length);
+const STOPS = ["Franz-Josef Gletscher", {
+    title: "Abel Tasman Nationalpark",
+    user: "fabianwild",
+    lat: -40.833333,
+    lng: 172.9,
+    wikipedia: "https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark"
+}, "Picton"];
 
+console.log(STOPS);
 
 let map = L.map('map').setView([stop_lat, stop_lon], zoom);
 
