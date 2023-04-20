@@ -105,6 +105,8 @@ let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+let esri = L.tileLayer.provider('Esri.WorldImagery').addTo(map);
+let mtbmap = L.tileLayer.provider('MtbMap').addTo(map);
 
 L.control.scale({metric: true}, {imperial: false}).addTo(map);
 
@@ -112,8 +114,11 @@ map.addControl(new L.Control.Fullscreen());
 
 L.control.layers({
     "OpenStreetmap": osm, 
-    "Watercolor": watercolor
+    "Watercolor": watercolor,
+    "Esri Map": esri,
+    "Mtb Map": mtbmap
 }).addTo(map);
+
 
 
 for (let stop of STOPS){
