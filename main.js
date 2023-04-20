@@ -106,7 +106,7 @@ let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 let esri = L.tileLayer.provider('Esri.WorldImagery').addTo(map);
-let mtbmap = L.tileLayer.provider('MtbMap').addTo(map);
+let topo = L.tileLayer.provider('OpenTopoMap').addTo(map);
 
 L.control.scale({metric: true}, {imperial: false}).addTo(map);
 
@@ -116,7 +116,7 @@ L.control.layers({
     "OpenStreetmap": osm, 
     "Watercolor": watercolor,
     "Esri Map": esri,
-    "Mtb Map": mtbmap
+    "Topographic Map": topo
 }).addTo(map);
 
 
