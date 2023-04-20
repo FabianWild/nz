@@ -100,13 +100,15 @@ const STOPS = [
 
 
 let map = L.map('map').setView([stop_lat, stop_lon], zoom);
-
+         
 let osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 
 L.control.scale({metric: true}, {imperial: false}).addTo(map);
+
+map.addControl(new L.Control.Fullscreen());
 
 L.control.layers({
     "OpenStreetmap": osm, 
@@ -116,7 +118,7 @@ L.control.layers({
 
 for (let stop of STOPS){
 
-     let marker = L.marker([stop.lat, stop.lng],{opacity: 0.7})
+     let marker = L.marker([stop.lat, stop.lng],{opacity: 1})
      .addTo(map)
      .bindPopup(`<h3>${stop.title}</h3>
      <a href = "${stop.wikipedia}"> Wikipedia</a>`);
