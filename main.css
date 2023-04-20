@@ -42,6 +42,7 @@ article p {
 
 #figcaption {
     color: azure;
+    padding: 0.5em 2em 0.5em 2em;
 }
 
 article h1,
